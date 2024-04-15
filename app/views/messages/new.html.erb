@@ -1,0 +1,10 @@
+<!-- app/views/messages/new.html.erb -->
+<h1>Enqueue Message with Your Name</h1>
+
+<%= form_with(url: messages_path, method: :post, html: { class: 'enqueue-form' }) do |form| %>
+  <div class="field">
+    <%= form.label :message_body, 'Your name' %>
+    <%= form.text_field :message_body, class: 'form-control' %>
+  </div>
+  <%= form.submit 'Enqueue', class: 'btn btn-primary' %>
+<% end %>
